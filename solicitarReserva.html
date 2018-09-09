@@ -1,0 +1,276 @@
+<DOCTYPE <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
+    </head>
+
+    <body>
+        <div class="ui blue top fixed inverted menu">
+            <div class="item">
+                <img src="images/logo.png">
+            </div>
+            <a class="item">Inicio</a>
+            <a class="item">Operaciones marítimas</a>
+            <a class="item">Mis visitas</a>
+            <a class="item">Mis transacciones</a>
+            <a class="item">Mis reservas</a>
+            <a class="item">Servicio al Cliente</a>
+
+            <div class="right menu">
+                <a class="ui item">
+                    AGT01
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="encabezado">
+                <h1>Solicitud de Reserva</h1>
+        </div>
+        <div class="ui container">
+            
+            <div class="ui vertically divided grid">
+                <div class="column row">
+                    <div class="column">
+                        <form action="POST" class="ui form" id="formulario">
+                            <h4 class="ui dividing header">Formulario Registro</h4>
+                            <div class="field">
+                                <div class="five fields">
+                                    <div class="field">
+                                        <label>Buque</label>
+                                        <input type="text" placeholder="Buque" name="buque">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>SIN</label>
+                                        <input type="text" placeholder="SIN" name="SIN">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Tipo Buque</label>
+                                        <input type="text" placeholder="Tipo Buque" name="Tipo Buque">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Número de orden de servicio</label>
+                                        <input type="text" placeholder="Numero orden" name="Numero de Orden">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Cliente</label>
+                                        <input type="text" placeholder="Cliente" name="Cliente">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="five fields">
+                                    <div class="field">
+                                        <label>Agente</label>
+                                        <input type="text" placeholder="Agente" name="Agente">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>ETA</label>
+                                        <input type="text" placeholder="ETA" name="ETA">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Número de visita</label>
+                                        <input type="text" placeholder="Número de visita" name="Número de visita">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Dirección</label>
+                                        <input type="text" placeholder="Dirección" name="Dirección">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>PD</label>
+                                        <input type="text" placeholder="PD" name="PD">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="five fields">
+                                    <div class="field">
+                                        <label>Extreme Beam</label>
+                                        <input type="text" placeholder="Hola1" name="nombre">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Categoría Buque</label>
+                                        <input type="text" placeholder="Categoría Buque" name="Categoría Buque">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>HML</label>
+                                        <input type="text" placeholder="HML" name="HML">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Restricción</label>
+                                        <input type="text" placeholder="Restricción" name="Restricción">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>PD</label>
+                                        <input type="text" placeholder="PD" name="PD">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="five fields">
+                                    <div class="field">
+                                        <label>Fecha de Reserva</label>
+                                        <input type="text" placeholder="aaaa-mm-dd" name="Fecha de Reserva">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>JIT</label>
+                                        <input type="text" placeholder="JIT" name="JIT">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Tránsito Diurno</label>
+                                        <input type="text" placeholder="Tránsito Diurno" name="Tránsito Diurno">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>MSG</label>
+                                        <input type="text" placeholder="MSG" name="MSG">
+                                    </div>
+
+                                </div>
+
+                                
+                            </div>
+
+
+                        </form>
+
+
+                        <form action="POST" class="ui form" id="formulario2">
+                            <h4 class="ui dividing header">Búsqueda</h4>
+                            <div class="field">
+                                <div class="four fields">
+                                    <div class="field">
+                                        <label>Fecha de reserva para :</label>
+                                        <input type="date" name="fecha">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Fecha de reserva desde :</label>
+                                        <input type="date" name="fechaD">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Tipo de transacción :</label>
+                                        <select>
+                                            <option value="">Ninguna </option>
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" tabindex="0" class="hidden">
+                                            <label>Show Draft Request</label>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                <div class="field">
+                                        <button class="ui blue button">Buscar</button>
+                                        <button class="ui orange button">Limpiar</button>
+                                    </div>
+                            </div>
+
+                        </form>
+
+                        <form action="POST" class="ui form" id="formulario3">
+                            <h4 class="ui dividing header">Accion</h4>
+                            <div class="field">
+                                <div class="fields">
+                                    <div class="field">
+                                        <label>Accion</label>
+                                        <select>
+                                            <option value="">Solicitud de Reserva </option>
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <table class="ui blue table">
+                            <thead>
+                                <tr>
+                                    <th>Iconos</th>
+                                    <th>Número de Transacción</th>
+                                    <th>Estado</th>
+                                    <th>Tipo de Transacción</th>
+                                    <th>Tiempo de llegada requerido</th>
+                                    <th>Fecha de Reserva</th>
+                                    <th>Fecha de Solicitud</th>
+                                    <th>ACP Approval</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="search icon"></i>
+                                        <i class="edit icon"></i>
+                                        <i class="file pdf outline icon"></i>
+                                    </td>
+                                    <td>JTRQ-34241-FAFAF</td>
+                                    <td>PENDING</td>
+                                    <td>JUST IN TIME REQUEST</td>
+                                    <td> </td>
+                                    <td>2015-06-21</td>
+                                    <td>2015-01-21</td>
+                                    <td> </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <i class="search icon"></i>
+                                        <i class="edit icon"></i>
+                                        <i class="file pdf outline icon"></i>
+                                    </td>
+                                    <td>JTRQ-34241-FAFAF</td>
+                                    <td>PENDING</td>
+                                    <td>JUST IN TIME REQUEST</td>
+                                    <td> </td>
+                                    <td>2015-06-21</td>
+                                    <td>2015-01-21</td>
+                                    <td> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    </html>

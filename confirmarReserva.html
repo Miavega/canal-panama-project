@@ -1,0 +1,227 @@
+<DOCTYPE <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
+    </head>
+
+    <body>
+        <div class="ui blue top fixed inverted menu">
+            <div class="item">
+                <img src="images/logo.png">
+            </div>
+            <a class="item">Inicio</a>
+            <a class="item">Operaciones marítimas</a>
+            <a class="item">Mis visitas</a>
+            <a class="item">Mis transacciones</a>
+            <a class="item">Mis reservas</a>
+            <a class="item">Servicio al Cliente</a>
+
+            <div class="right menu">
+                <a class="ui item">
+                    AGT01
+                </a>
+            </div>
+        </div>
+
+        <div class="encabezado">
+                <h1>Solicitud de Reserva</h1>
+        </div>
+
+        <div class="ui container">
+                <div class="ui vertically divided grid">
+                    <div class="column row">
+                        <div class="column">
+                            <form action="POST" class="ui form" id="formulario">
+                                <h4 class="ui dividing header">Información del Buque</h4>
+                                <div class="field">
+                                    <div class="four fields">
+                                        <div class="field">
+                                            <label>Buque</label>
+                                            <input type="text" placeholder="Buque" name="buque">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>SIN</label>
+                                            <input type="text" placeholder="SIN" name="SIN">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Tipo Buque</label>
+                                            <input type="text" placeholder="Tipo Buque" name="Tipo Buque">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Número de orden de servicio</label>
+                                            <input type="text" placeholder="Numero orden" name="Numero de Orden">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="four fields">
+                                        <div class="field">
+                                            <label>Cliente</label>
+                                            <input type="text" placeholder="Cliente" name="Cliente">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>ETA</label>
+                                            <input type="text" placeholder="ETA" name="ETA">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Número de visita</label>
+                                            <input type="text" placeholder="Número de visita" name="Número de visita">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Dirección</label>
+                                            <input type="text" placeholder="Dirección" name="Dirección">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="four fields">
+                                        <div class="field">
+                                            <label>PD</label>
+                                            <input type="text" placeholder="Hola1" name="nombre">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Fecha de Reserva</label>
+                                            <input type="text" placeholder="aaaa-mm-dd" name="Fecha de Reserva">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>JIT</label>
+                                            <input type="text" placeholder="JIT" name="JIT">
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Tránsito Diurno</label>
+                                            <input type="text" placeholder="Tránsito Diurno" name="Tránsito Diurno">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+
+                            <form action="POST" class="ui form" id="formulario4">
+                                <h4 class="ui dividing header">Fecha de solicitud</h4>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="date" name="fecha">
+                                    </div>
+                                    <div class="field">
+                                        <button class="ui blue button">Revisar Disponibilidad</button>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                            <form action="POST" class="ui form" id="formulario3">
+                                <h4 class="ui dividing header">Cliente</h4>
+                                <div class="field">
+                                    <div class="fields">
+                                        <div class="field">
+                                            <select>
+                                                <option value="">TBA</option>
+                                                <option value="1">Male</option>
+                                                <option value="0">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <form action="POST" class="ui form" id="formulario5">
+                                <h4 class="ui dividing header">Información Adicional</h4>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" tabindex="0" class="hidden">
+                                            <label>Solicitud Just In Time</label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <input type="date" name="fechaJIT">
+                                    </div>
+
+                                </div>
+
+                                <div class="inline field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" tabindex="0" class="hidden">
+                                        <label>Solicitud de tránsito diurno</label>
+                                    </div>
+                                </div>
+                                <div class="inline field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" tabindex="0" class="hidden">
+                                        <label>¿Quiere hacer parte de la lista de espera?</label>
+                                    </div>
+                                </div>
+
+                                <div class="inline field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" tabindex="0" class="hidden">
+                                        <label>Subasta</label>
+                                    </div>
+                                </div>
+
+                                <div class="inline field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" tabindex="0" class="hidden">
+                                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis
+                                            neque, porta sodales risus eu, rutrum finibus elit. Donec gravida tortor
+                                            quis ornare tincidunt. Maecenas eget dignissim est. Sed vitae massa
+                                            pulvinar, posuere ex eu, venenatis orci. Nam rutrum nisi libero, vel
+                                            egestas erat cursus bibendum. Fusce et ullamcorper ipsum. Quisque a odio
+                                            gravida orci mollis semper non ac erat. Nulla at libero posuere, ultricies
+                                            leo euismod, posuere sapien. Nullam sed feugiat nulla. Pellentesque
+                                            volutpat sem bibendum, vehicula est eget, egestas nulla. Integer sapien
+                                            nunc, porttitor sed convallis ut, accumsan sed ante. Duis pharetra ex
+                                            pulvinar, tincidunt lacus in, pulvinar neque. Donec ut purus at erat
+                                            efficitur semper quis ut justo. Quisque efficitur libero magna, congue
+                                            tristique nulla pellentesque non. Donec sem sem, euismod a felis interdum,
+                                            placerat congue mauris.s</label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <button class="ui blue button">Enviar Solicitud</button>
+                                    <button class="ui blue button">Guardar como borrador</button>
+                                    <button class="ui blue button">Regresar a mis visitas/Movimientos</button>
+                                    <button class="ui orange button">Cerrar</button>
+
+                                </div>
+
+
+
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+
+
+    </body>
+
+    </html>
