@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Servidor/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servidor/">
+
+<xs:element name="ParseException" type="tns:ParseException"/>
+
+<xs:element name="RHException" type="tns:RHException"/>
+
+<xs:element name="insertarCupoPaso" type="tns:insertarCupoPaso"/>
+
+<xs:element name="insertarCupoPasoResponse" type="tns:insertarCupoPasoResponse"/>
+
+<xs:element name="leerCupos" type="tns:leerCupos"/>
+
+<xs:element name="leerCuposResponse" type="tns:leerCuposResponse"/>
+
+<xs:element name="leerFechasCupos" type="tns:leerFechasCupos"/>
+
+<xs:element name="leerFechasCuposResponse" type="tns:leerFechasCuposResponse"/>
+
+<xs:element name="modificarCupoPaso" type="tns:modificarCupoPaso"/>
+
+<xs:element name="modificarCupoPasoResponse" type="tns:modificarCupoPasoResponse"/>
+
+<xs:complexType name="modificarCupoPaso">
+<xs:sequence>
+<xs:element name="k_paso" type="xs:string" minOccurs="0"/>
+<xs:element name="f_asignacion" type="xs:string" minOccurs="0"/>
+<xs:element name="q_ctotales" type="xs:int"/>
+<xs:element name="q_cdisponibles" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarCupoPasoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="RHException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ParseException">
+<xs:sequence>
+<xs:element name="errorOffset" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerCupos">
+<xs:sequence>
+<xs:element name="k_paso" type="xs:string" minOccurs="0"/>
+<xs:element name="f_asignacion" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerCuposResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cupoPasoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cupoPasoVO">
+<xs:sequence>
+<xs:element name="f_asignacioncupos" type="xs:string" minOccurs="0"/>
+<xs:element name="k_cupopaso" type="xs:long"/>
+<xs:element name="k_paso" type="xs:string" minOccurs="0"/>
+<xs:element name="q_cdisponibles" type="xs:int"/>
+<xs:element name="q_ctotales" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerFechasCupos">
+<xs:sequence>
+<xs:element name="k_paso" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerFechasCuposResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cupoPasoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarCupoPaso">
+<xs:sequence>
+<xs:element name="k_paso" type="xs:string" minOccurs="0"/>
+<xs:element name="q_ctotales" type="xs:int"/>
+<xs:element name="f_asignacioncupos" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarCupoPasoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

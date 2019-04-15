@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-Buque" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Buque"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Buque" destdir="${build.generated.dir}/jax-wsCache/Buque" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Buque/wsdl/localhost_8083/CanalPanamaServer/Buque.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Buque?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Buque/wsdl/localhost_8083/CanalPanamaServer/Buque.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Buque"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Buque">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Buque" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Buque"/>
+    </target>
+    <target name="wsimport-client-Reserva" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Reserva"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Reserva" destdir="${build.generated.dir}/jax-wsCache/Reserva" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Reserva/wsdl/localhost_8083/CanalPanamaServer/Reserva.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Reserva?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Reserva/wsdl/localhost_8083/CanalPanamaServer/Reserva.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Reserva"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Reserva">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Reserva" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Reserva"/>
+    </target>
+    <target name="wsimport-client-conexionBD" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/conexionBD"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/conexionBD" destdir="${build.generated.dir}/jax-wsCache/conexionBD" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/conexionBD/wsdl/localhost_8083/CanalPanamaServer/conexionBD.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/conexionBD?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/conexionBD/wsdl/localhost_8083/CanalPanamaServer/conexionBD.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/conexionBD"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/conexionBD">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-conexionBD" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/conexionBD"/>
+    </target>
+    <target name="wsimport-client-Paso" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Paso"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Paso" destdir="${build.generated.dir}/jax-wsCache/Paso" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Paso/wsdl/localhost_8083/CanalPanamaServer/Paso.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Paso?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Paso/wsdl/localhost_8083/CanalPanamaServer/Paso.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Paso"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Paso">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Paso" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Paso"/>
+    </target>
+    <target name="wsimport-client-Puerto" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Puerto"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Puerto" destdir="${build.generated.dir}/jax-wsCache/Puerto" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Puerto/wsdl/localhost_8083/CanalPanamaServer/Puerto.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Puerto?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Puerto/wsdl/localhost_8083/CanalPanamaServer/Puerto.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Puerto"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Puerto">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Puerto" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Puerto"/>
+    </target>
+    <target name="wsimport-client-ProgDiaria" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProgDiaria"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProgDiaria" destdir="${build.generated.dir}/jax-wsCache/ProgDiaria" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ProgDiaria/wsdl/localhost_8083/CanalPanamaServer/ProgDiaria.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/ProgDiaria?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ProgDiaria/wsdl/localhost_8083/CanalPanamaServer/ProgDiaria.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProgDiaria"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProgDiaria">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProgDiaria" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ProgDiaria"/>
+    </target>
+    <target name="wsimport-client-Carga" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Carga"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Carga" destdir="${build.generated.dir}/jax-wsCache/Carga" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Carga/wsdl/localhost_8083/CanalPanamaServer/Carga.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Carga?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Carga/wsdl/localhost_8083/CanalPanamaServer/Carga.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Carga"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Carga">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Carga" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Carga"/>
+    </target>
+    <target name="wsimport-client-OrdenPago" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/OrdenPago"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/OrdenPago" destdir="${build.generated.dir}/jax-wsCache/OrdenPago" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/OrdenPago/wsdl/localhost_8083/CanalPanamaServer/OrdenPago.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/OrdenPago?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/OrdenPago/wsdl/localhost_8083/CanalPanamaServer/OrdenPago.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/OrdenPago"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/OrdenPago">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-OrdenPago" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/OrdenPago"/>
+    </target>
+    <target name="wsimport-client-Pago" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Pago"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Pago" destdir="${build.generated.dir}/jax-wsCache/Pago" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Pago/wsdl/localhost_8083/CanalPanamaServer/Pago.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Pago?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Pago/wsdl/localhost_8083/CanalPanamaServer/Pago.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Pago"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Pago">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Pago" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Pago"/>
+    </target>
+    <target name="wsimport-client-Subasta" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Subasta"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Subasta" destdir="${build.generated.dir}/jax-wsCache/Subasta" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Subasta/wsdl/localhost_8083/CanalPanamaServer/Subasta.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Subasta?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Subasta/wsdl/localhost_8083/CanalPanamaServer/Subasta.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Subasta"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Subasta">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Subasta" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Subasta"/>
+    </target>
+    <target name="wsimport-client-Puja" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Puja"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Puja" destdir="${build.generated.dir}/jax-wsCache/Puja" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Puja/wsdl/localhost_8083/CanalPanamaServer/Puja.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Puja?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Puja/wsdl/localhost_8083/CanalPanamaServer/Puja.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Puja"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Puja">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Puja" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Puja"/>
+    </target>
+    <target name="wsimport-client-BancoCP" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/BancoCP"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BancoCP" destdir="${build.generated.dir}/jax-wsCache/BancoCP" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/BancoCP/wsdl/localhost_8083/CanalPanamaServer/BancoCP.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/BancoCP?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/BancoCP/wsdl/localhost_8083/CanalPanamaServer/BancoCP.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/BancoCP"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/BancoCP">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-BancoCP" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/BancoCP"/>
+    </target>
+    <target name="wsimport-client-Transito" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Transito"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Transito" destdir="${build.generated.dir}/jax-wsCache/Transito" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Transito/wsdl/localhost_8083/CanalPanamaServer/Transito.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8083/CanalPanamaServer/Transito?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Transito/wsdl/localhost_8083/CanalPanamaServer/Transito.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Transito"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Transito">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Transito" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servidor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Transito"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Buque, wsimport-client-Reserva, wsimport-client-conexionBD, wsimport-client-Paso, wsimport-client-Puerto, wsimport-client-ProgDiaria, wsimport-client-Carga, wsimport-client-OrdenPago, wsimport-client-Pago, wsimport-client-Subasta, wsimport-client-Puja, wsimport-client-BancoCP, wsimport-client-Transito"/>
+</project>

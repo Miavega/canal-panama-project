@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="Reserva">
+      <implementation-class>Servidor.Reserva</implementation-class>
+    </service>
+    <service name="OrdenPago">
+      <implementation-class>Servidor.OrdenPago</implementation-class>
+    </service>
+    <service name="Buque">
+      <implementation-class>Servidor.Buque</implementation-class>
+    </service>
+    <service name="conexionBD">
+      <implementation-class>Servidor.conexionBD</implementation-class>
+    </service>
+    <service name="Paso">
+      <implementation-class>Servidor.Paso</implementation-class>
+    </service>
+    <service name="Carga">
+      <implementation-class>Servidor.Carga</implementation-class>
+    </service>
+    <service name="Puerto">
+      <implementation-class>Servidor.Puerto</implementation-class>
+    </service>
+    <service name="ProgramacionDiaria">
+      <implementation-class>Servidor.ProgramacionDiaria</implementation-class>
+    </service>
+    <service name="Pago">
+      <implementation-class>Servidor.Pago</implementation-class>
+    </service>
+    <service name="Subasta">
+      <implementation-class>Servidor.Subasta</implementation-class>
+    </service>
+    <service name="Puja">
+      <implementation-class>Servidor.Puja</implementation-class>
+    </service>
+    <service name="BancoCP">
+      <implementation-class>Servidor.BancoCP</implementation-class>
+    </service>
+    <service name="Transito">
+      <implementation-class>Servidor.Transito</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

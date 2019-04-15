@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Servidor/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servidor/">
+
+<xs:element name="RHException" type="tns:RHException"/>
+
+<xs:element name="generarPDFReserva" type="tns:generarPDFReserva"/>
+
+<xs:element name="generarPDFReservaResponse" type="tns:generarPDFReservaResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="leerPagosCliente" type="tns:leerPagosCliente"/>
+
+<xs:element name="leerPagosClienteResponse" type="tns:leerPagosClienteResponse"/>
+
+<xs:element name="leerPagosCoord" type="tns:leerPagosCoord"/>
+
+<xs:element name="leerPagosCoordResponse" type="tns:leerPagosCoordResponse"/>
+
+<xs:element name="pagarOrdenReserva" type="tns:pagarOrdenReserva"/>
+
+<xs:element name="pagarOrdenReservaResponse" type="tns:pagarOrdenReservaResponse"/>
+
+<xs:complexType name="leerPagosCliente">
+<xs:sequence>
+<xs:element name="k_identificacion" type="xs:long"/>
+<xs:element name="k_tipoid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerPagosClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pagoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pagoVO">
+<xs:sequence>
+<xs:element name="campoExtra1" type="xs:string" minOccurs="0"/>
+<xs:element name="campoExtra2" type="xs:string" minOccurs="0"/>
+<xs:element name="campoExtra3" type="xs:string" minOccurs="0"/>
+<xs:element name="campoExtra4" type="xs:string" minOccurs="0"/>
+<xs:element name="f_pago" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="i_formapago" type="xs:string" minOccurs="0"/>
+<xs:element name="k_ordendepago" type="xs:long"/>
+<xs:element name="k_pago" type="xs:long"/>
+<xs:element name="o_cuentaorigen" type="xs:string" minOccurs="0"/>
+<xs:element name="v_pago" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RHException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pagarOrdenReserva">
+<xs:sequence>
+<xs:element name="k_reserva" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pagarOrdenReservaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="leerPagosCoord">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="leerPagosCoordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pagoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarPDFReserva">
+<xs:sequence>
+<xs:element name="k_reserva" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarPDFReservaResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>

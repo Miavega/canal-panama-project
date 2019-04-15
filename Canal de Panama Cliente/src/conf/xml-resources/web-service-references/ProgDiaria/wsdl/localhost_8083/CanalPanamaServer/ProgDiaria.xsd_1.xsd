@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Servidor/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servidor/">
+
+<xs:element name="ParseException" type="tns:ParseException"/>
+
+<xs:element name="RHException" type="tns:RHException"/>
+
+<xs:element name="insertarProgramacionDiaria" type="tns:insertarProgramacionDiaria"/>
+
+<xs:element name="insertarProgramacionDiariaResponse" type="tns:insertarProgramacionDiariaResponse"/>
+
+<xs:element name="leerProgramacionDiaria" type="tns:leerProgramacionDiaria"/>
+
+<xs:element name="leerProgramacionDiariaResponse" type="tns:leerProgramacionDiariaResponse"/>
+
+<xs:complexType name="insertarProgramacionDiaria">
+<xs:sequence>
+<xs:element name="kreservas" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="puertosS" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="puertosL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="horasS" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="horasL" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProgramacionDiariaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="RHException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ParseException">
+<xs:sequence>
+<xs:element name="errorOffset" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerProgramacionDiaria">
+<xs:sequence>
+<xs:element name="f_transito" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerProgramacionDiariaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programacionDiariaVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programacionDiariaVO">
+<xs:sequence>
+<xs:element name="campoExtra1" type="xs:string" minOccurs="0"/>
+<xs:element name="campoExtra2" type="xs:string" minOccurs="0"/>
+<xs:element name="f_progyhorallegada" type="tns:timestamp" minOccurs="0"/>
+<xs:element name="f_progyhorasalida" type="tns:timestamp" minOccurs="0"/>
+<xs:element name="k_identificacion" type="xs:long"/>
+<xs:element name="k_programacion" type="xs:long"/>
+<xs:element name="k_puertollegada" type="xs:long"/>
+<xs:element name="k_puertosalida" type="xs:long"/>
+<xs:element name="k_reserva" type="xs:long"/>
+<xs:element name="k_tipoid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="timestamp">
+<xs:sequence>
+<xs:element name="nanos" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

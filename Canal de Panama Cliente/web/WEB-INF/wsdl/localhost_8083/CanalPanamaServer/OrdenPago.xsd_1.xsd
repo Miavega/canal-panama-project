@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Servidor/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servidor/">
+
+<xs:element name="RHException" type="tns:RHException"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="leerEstadoOrdenPago" type="tns:leerEstadoOrdenPago"/>
+
+<xs:element name="leerEstadoOrdenPagoResponse" type="tns:leerEstadoOrdenPagoResponse"/>
+
+<xs:element name="leerOrdenPago" type="tns:leerOrdenPago"/>
+
+<xs:element name="leerOrdenPagoResponse" type="tns:leerOrdenPagoResponse"/>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerEstadoOrdenPago">
+<xs:sequence>
+<xs:element name="k_concepto" type="xs:string" minOccurs="0"/>
+<xs:element name="k_reserva" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerEstadoOrdenPagoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RHException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerOrdenPago">
+<xs:sequence>
+<xs:element name="k_reserva" type="xs:string" minOccurs="0"/>
+<xs:element name="k_concepto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerOrdenPagoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ordenPagoVO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ordenPagoVO">
+<xs:sequence>
+<xs:element name="f_emision" type="xs:string" minOccurs="0"/>
+<xs:element name="f_maxpago" type="xs:string" minOccurs="0"/>
+<xs:element name="k_concepto" type="xs:string" minOccurs="0"/>
+<xs:element name="k_ordendepago" type="xs:long"/>
+<xs:element name="k_reserva" type="xs:long"/>
+<xs:element name="n_estadopago" type="xs:string" minOccurs="0"/>
+<xs:element name="v_ordendepago" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
