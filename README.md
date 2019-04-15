@@ -1,8 +1,11 @@
-##Proyecto final para la asignatura de Bases de Datos II (Canal de Panamá)
+## Proyecto final para la asignatura de Bases de Datos II (Canal de Panamá)
 **Autores:**
 Maria Camila Guerrero – 20142020051
+
 Miguel Angel Vega- 20142020045
+
 Daniel Esteban Ladino- 20142020043
+
 Nicolas Steeven Rivera- 20142020021
 
 **Propósito del sistema:**
